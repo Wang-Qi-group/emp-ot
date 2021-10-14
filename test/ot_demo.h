@@ -6,13 +6,13 @@ using namespace emp;
 template <typename T>
 double ot_demo(T *ot, NetIO *io, int party, int64_t length)
 {
-    // 创建三个长度为 length 的 block 数组，b0 和 b1 归 sender 所有，r 归 reciver 所有
+    // 创建三个长度为 length 的 block 数组，b0 和 b1 归 sender 所有，r 归 receiver 所有
     block *b0 = new block[length], *b1 = new block[length], *r = new block[length];
     PRG prg(fix_key);
 
     *b0 = _mm_set1_epi32(0);
     *b1 = _mm_set1_epi32(1);
-    
+
     // 创建一个长度为 length 的 Boolean 数组，每一位都是一个 choice bit
     // 当第 i 位 choice bit 是 0 的时候选择 b0[i]，第 i 位是 1 的时候选择 b1[i]
     bool *c = new bool[length];
