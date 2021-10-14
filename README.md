@@ -10,7 +10,7 @@
 Warning
 ====
 This repo is a comment version for [wangxiao's emp-ot](https://github.com/emp-toolkit/emp-ot) repo with some demo or test case.
-Any usage or acknowledgment show be based on the origin project.
+Any usage or acknowledgment should be based on the origin project.
 
 Protocols
 =====
