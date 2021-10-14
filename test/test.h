@@ -12,7 +12,7 @@ double test_ot(T *ot, NetIO *io, int party, int64_t length)
 	prg.random_block(b0, length);
 	prg.random_block(b1, length);
 	bool *b = new bool[length];
-	
+
 	PRG prg2;
 	prg2.random_bool(b, length);
 
@@ -27,6 +27,8 @@ double test_ot(T *ot, NetIO *io, int party, int64_t length)
 	}
 	io->flush();
 	long long t = time_from(start);
+
+	// 如果执行的进程 party 为 BOB，就去检查收到的 r 是否按 b 这个 choice bit 数组的值在 b0 数组和 b1 数组之间选择
 	if (party == BOB)
 	{
 		for (int64_t i = 0; i < length; ++i)
