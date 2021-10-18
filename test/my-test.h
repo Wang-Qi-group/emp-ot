@@ -1,8 +1,13 @@
-#include<emmintrin.h>
+// #include<emmintrin.h>
 
 #include <emp-tool/emp-tool.h>
 #include "emp-ot/emp-ot.h"
+
+#include <cstdint>
+#include <string>
+#include <cstdio>
 #include <iostream>
+
 using namespace emp;
 
 
@@ -13,7 +18,7 @@ void print128_num(__m128i var)
 
     char buffer[50];
     sprintf(buffer, "Numerical: %i", val[0]);
-    cout << buffer << endl;
+    std::cout << buffer << std::endl;
 }
 
 
@@ -28,7 +33,7 @@ double my_test_ot(T *ot, NetIO *io, int party, int64_t length)
     // 对 b0 和 b1 进行初始化
     for (int64_t i = 0; i < length; ++i){
         *(b0 + i) = _mm_set1_epi32(0);
-        *(b1 + i) = _mm_set1_epi32(i);
+        *(b1 + i) = _mm_set1_epi32(1);
     }
 
     // 创建一个长度为 length 的 Boolean 数组，每一位都是一个 choice bit
