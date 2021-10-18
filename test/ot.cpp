@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 
 	// 测试我写的 OT 样例
 	OTNP<NetIO> * np = new OTNP<NetIO>(io);
-	cout << "Test on 16 round ot" << endl;
+	cout << "Test on 16 rounds ot" << endl;
 	cout << "16 NPOTs:\n" << my_test_ot<OTNP<NetIO>>(np, io, party, 16) << " us" << endl;
 	delete np;
 
