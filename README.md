@@ -12,6 +12,12 @@ Warning
 This repo is a comment version for [wangxiao's emp-ot](https://github.com/emp-toolkit/emp-ot) repo with some demo or test case.
 Any usage or acknowledgment should be based on the origin project.
 
+For testing compiling, you can just use:
+```
+cmake .
+make -j4
+```
+
 Protocols
 =====
 This repo contains state-of-the-art OT implementations. Include two base OTs, IKNP OT extension and Ferret OT extension. All hash functions used for OTs are implemented with [MiTCCR](https://github.com/emp-toolkit/emp-tool/blob/master/emp-tool/utils/mitccrh.h#L8) for optimal concrete security.
